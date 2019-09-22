@@ -13,7 +13,7 @@ import smtplib
 #from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 folder = "data\\"
-
+limit = 4
 options = Options()
 options.headless = True
 # chrome_options=options
@@ -218,7 +218,7 @@ for d in Days:
 	try:	
 		driver.find_element_by_xpath("//span[@class='gotoNextScreen']").click()	
 		time.sleep(5)		
-		for x in range(2,4):
+		for x in range(2,limit):
 			stri = "0_"
 			newHTML = driver.page_source
 			y = str(x)
